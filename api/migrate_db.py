@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 
 from api.models.note import Base as Note
 
-DB_URL = "mysql+pymysql://root@db:3306/demo?charset=utf8"
+DB_URL = "mysql+pymysql://root@db:3306/hackit-sample?charset=utf8"
 engine = create_engine(DB_URL, echo=True)
 
 
