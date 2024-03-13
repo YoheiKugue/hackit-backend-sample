@@ -1,14 +1,14 @@
 from sqlalchemy import create_engine
 
-from api.models.task import Base
+from api.models.note import Base as Note
 
 DB_URL = "mysql+pymysql://root@db:3306/demo?charset=utf8"
 engine = create_engine(DB_URL, echo=True)
 
 
 def reset_database():
-    Base.metadata.drop_all(bind=engine)
-    Base.metadata.create_all(bind=engine)
+    Note.metadata.drop_all(bind=engine)
+    Note.metadata.create_all(bind=engine)
 
 
 if __name__ == "__main__":
